@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router';
 import { Header } from '../components/Header';
-import ChatWidget from '../components/ChatWidget'; // <-- 1. Agrega esta importación
+import ChatWidget from '../components/ui/ChatWidget'; // <-- 1. Agrega esta importación
 
 export function Layout() {
   return (
