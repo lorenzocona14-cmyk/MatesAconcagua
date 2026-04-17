@@ -1,0 +1,114 @@
+/* Estilos del contenedor general */
+.chat-widget-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* El círculo flotante */
+.chat-fab {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #1a1a1a; /* Un tono oscuro y moderno */
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-fab:hover {
+  transform: scale(1.05);
+  background-color: #333333;
+}
+
+/* La ventana del chat */
+.chat-window {
+  position: absolute;
+  bottom: 80px; /* Se eleva por encima del botón */
+  right: 0;
+  width: 320px;
+  height: 400px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  
+  /* Animación de entrada/salida */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.chat-window.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+/* Cabecera del chat */
+.chat-header {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.chat-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Cuerpo del chat */
+.chat-body {
+  flex: 1;
+  padding: 16px;
+  background-color: #f7f7f7;
+  color: #333;
+  font-size: 14px;
+  overflow-y: auto;
+}
+
+/* Área para escribir (Deshabilitada por ahora) */
+.chat-input-area {
+  padding: 12px;
+  background: #fff;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+  gap: 8px;
+}
+
+.chat-input-area input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 24px;
+  outline: none;
+  background-color: #f9f9f9;
+}
+
+.chat-input-area button {
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 24px;
+  cursor: not-allowed; /* Indica que aún no se puede usar */
+  opacity: 0.7;
+}
