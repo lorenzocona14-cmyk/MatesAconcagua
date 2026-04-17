@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router';
 import { Header } from '../components/Header';
+import ChatWidget from '../components/ui/ChatWidget'; // <-- 1. Agrega esta importación
 
 export function Layout() {
   return (
@@ -16,6 +17,9 @@ export function Layout() {
           </p>
         </div>
       </footer>
+      
+      <ChatWidget /> {/* <-- 2. Coloca el widget justo antes de cerrar el div principal */}
+      
     </div>
   );
 }
