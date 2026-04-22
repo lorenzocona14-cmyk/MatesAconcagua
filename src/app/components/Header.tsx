@@ -56,7 +56,7 @@ export function Header() {
         <div className="flex items-center justify-between gap-4">
           {/* Logo */}
           <Link to="/" className="text-2xl font-bold flex items-center gap-2 flex-shrink-0">
-            <img src="../../../../logo.png" alt="Logo Home" className="h-18 w-auto" />
+            <img src="logo.png" alt="Logo Home" className="h-18 w-auto" />
           </Link>
 
           {/* Desktop Navigation & Search */}
